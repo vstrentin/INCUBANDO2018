@@ -43,14 +43,14 @@ valb = digitalRead(portab);  // ler o valor de entrada
 
 
 //condicao de disparo do alarme aos 32C
-  if(valor < 300 && cel>15 && valb){
+  if(valor < 300 && cel>32 && valb){
     tone(buzzer,392);  
     angulo = 70; 
     meuservo.write(angulo); // Comando para angulo específico 
 
     
 //Condiçao de disparo do alarme aos 42C
-         if(valor < 300 && cel>22 && valb){
+         if(valor < 300 && cel>42 && valb){
             tone(buzzer,392); 
             angulo = 150;
            meuservo.write(angulo); // Comando para angulo específico   
